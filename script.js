@@ -112,8 +112,31 @@ function descriptografa(event){
 
 //  Função de copiar
 
-var copiar = document.querySelector("#btn-copy");
+function copiar(){
+    let textoCriptografado= document.querySelector("#msg")
+    textoCriptografado.select();
+    document.execCommand("copy");
+    textoCriptografado.value = ' '
+}
 
-copiar.addEventListener('click', function(){
-    alert('deu certo!')
-});
+document.querySelector("#copiar").addEventListener('click', copiar)
+
+
+// Função de colar 
+
+function colar(event){
+    
+    event.preventDefault();
+    navigator.clipboard.readText()
+
+    .then(txt =>{
+        document.getElementById("input-texto").value = txt;
+    })
+
+    .catch(err =>{
+        alert('No access')
+
+    });
+}
+
+document.querySelector("#btn-colar").addEventListener("click", colar);
