@@ -12,21 +12,19 @@
 
   <main class="main">
     <section class="form box">
-      <form action="">
+      <form action="" id="form">
         <label for="input-texto">Apenas letras minúsculas, sem acento</label>
         <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Insira o texto aqui">
-        <input class="btn" value="Criptografar!" id="btn-cripto" onclick="criptografar()">
-        <input class="btn" value="Descriptografar!" id="btn-descripto" onclick="descriptografar()">
+        <button class="btn" id="btn-cripto"  > Criptografar!</button>
+        <button class="btn" id="btn-descripto">Descriptografar!</button>
       </form>
     </section>
-  
     <section class="msg box">
       <h2 id="">Mensagem Criptografada:</h2>
       <input class="text-input" type="text" id="msg">
       <input class="btn" type="submit" value="Copiar" id="btn-copy" onclick="copiar()">
     </section>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>

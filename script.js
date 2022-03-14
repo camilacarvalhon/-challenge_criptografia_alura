@@ -22,11 +22,18 @@ Não permite acentuação
 
 // Função de criptografar 
 
-function criptografar(){
+var criptografar = document.querySelector("#btn-cripto")
+
+criptografar.addEventListener('click', criptografa);
+function criptografa(event){
+
+    event.preventDefault();
 
     let texto = document.getElementById('input-texto').value;
 
     let texto_cripto = ''
+
+    let form = document.querySelector("#form")
 
     for (let l of texto){
 
@@ -45,18 +52,26 @@ function criptografar(){
             texto_cripto = texto_cripto + l
         }
     }
+    document.querySelector("#msg").value= texto_cripto;
+    form.reset();
 
-    // document.getElementById("msg").innerText = 
-    console.log(texto_cripto);
 
 }
 
 // Função de descriptografar
-function descriptografar(){
+
+var descriptografar = document.querySelector("#btn-descripto");
+descriptografar.addEventListener('click', descriptografa);
+
+function descriptografa(event){
+    event.preventDefault();
+
 
     let texto = document.getElementById('input-texto').value;
 
     let texto_descripto = ''
+
+    let form = document.querySelector("#form")
 
     for (let i=0; i< texto.length; i++){
        
@@ -91,10 +106,14 @@ function descriptografar(){
         
         
     }
-    console.log(texto_descripto);
+    document.querySelector("#msg").value= texto_descripto;
+    form.reset();
 }
 
 //  Função de copiar
-function copiar(){
+
+var copiar = document.querySelector("#btn-copy");
+
+copiar.addEventListener('click', function(){
     alert('deu certo!')
-}
+});
