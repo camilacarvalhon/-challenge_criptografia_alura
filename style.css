@@ -43,7 +43,7 @@ h1{
   border: 0;
   color: white!important;
   font-weight: bold;
-  background-color: blue!important;
+  background-color: #13293d!important;
   padding: 10px;
   margin-top: 10px;
   border-radius: 0.5em;
@@ -54,7 +54,7 @@ h1{
 }
 
 #btn-descripto{
-  background-color: #e57373!important;
+  background-color: #db2e2e!important;
 }
 
 
